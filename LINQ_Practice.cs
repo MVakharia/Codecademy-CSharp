@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
 
-public class CodecademyPractice : MonoBehaviour
+public class LINQ_Practice : MonoBehaviour
 {
     /*
      
@@ -10,6 +10,8 @@ public class CodecademyPractice : MonoBehaviour
 
     The intention is for the app to explain programming concepts 
     and computer science in a way that's simple and easy to understand.
+
+    The method names in this file are extremely long and very descriptive, for learning purposes only. 
      
      */
 
@@ -26,8 +28,6 @@ public class CodecademyPractice : MonoBehaviour
     {
 
     }
-
-    
 
     void VarKeywordShort ()
     {
@@ -131,17 +131,62 @@ public class CodecademyPractice : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Method syntax.
+    /// Creates a new list based on cSharpConcepts with only the elements that include the word 'language'.
+    /// This version has no 'Select()' method, as it isn't making any changes to elements. 
+    /// </summary>
     void QueryContainsLanguages_MethodSyntax_NoSelect ()
     {
+        var hasLanguages = cSharpConcepts.Where(c => c.Contains("languages"));
 
+        foreach(var c in hasLanguages)
+        {
+            Debug.Log(c);
+        }
     }
 
-    void QueryContainsLanguages_QuerySyntax_Select()
+    /// <summary>
+    /// Query syntax. 
+    /// Creates a new list based on cSharpConcepts with only the elements that include the word 'language'.
+    /// Since we're writing query syntax, we must include the 'select' keyword.
+    /// </summary>
+    void QueryContainsLanguages_QuerySyntax()
     {
         var hasLanguages = from c in cSharpConcepts where c.Contains("Languages") select c;
+
+        foreach(var c in hasLanguages)
+        {
+            Debug.Log(c);
+        }
     }
 
-    void QueryReplacesWord ()
+    /// <summary>
+    /// Creates a new list based on the list 'cSharpConcepts'.
+    /// 
+    /// Replaces every instance of the word 'difference' in an element with the word 'contrast'.
+    /// 
+    /// We don't need to check if the element contains the word 'difference', 
+    /// because the 'Replace()' function does this already.
+    /// </summary>
+    void QueryReplacesWord_QuerySyntax_FromWhereSelect()
     {
+        var hasDifference = from c in cSharpConcepts where c.Contains("difference")
+                            select c.Replace("difference", "contrast");
+
+        foreach (var c in hasDifference)
+        {
+            Debug.Log(c);
+        }
+    }
+
+    void QueryReplacesWord_QS_FromSelect ()
+    {
+        var hasDifference = from c in cSharpConcepts select c.Replace("difference", "contrast");
+
+        foreach(var c in hasDifference)
+        {
+            Debug.Log(c);
+        }
     }
 }
