@@ -15,6 +15,16 @@ public class LINQ_Practice : MonoBehaviour
      
      */
 
+    /*
+     
+    LINQ general rule:
+
+    For single-operator queries, use method syntax.
+
+    For everything else, use query syntax. 
+
+     */
+
     readonly List<string> cSharpConcepts = new List<string>
     {
         "The 'char' data type",
