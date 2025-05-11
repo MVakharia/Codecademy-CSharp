@@ -5,6 +5,11 @@ public class CentralProcessingUnit : MonoBehaviour
 {
     PrimaryMemory primaryMemory;
 
+    /// <summary>
+    /// The process currently being executed. The CPU can normally only execute one process at a time. 
+    /// </summary>
+    Process currentProcess;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -68,5 +73,15 @@ public class CentralProcessingUnit : MonoBehaviour
 
             Debug.Log("Executing instructions.");
         }
+    }
+
+    /// <summary>
+    /// Blocks the current process. The next process in the queue will automatically start. 
+    /// </summary>
+    /// <param name="interrupt"></param>
+    /// <param name="prioritise"></param>
+    void PreEmpt (Process interrupt, Process prioritise)
+    {
+        interrupt.Block();
     }
 }
