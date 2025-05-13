@@ -86,6 +86,8 @@ public class ControlBlock
 /// <summary>
 /// An abstract, dynamic data structure that represents all of the necessary 
 /// operating system information to run a program. 
+/// 
+/// The 'throughput' is the total number of processes completed per unit of time. 
 /// </summary>
 public class Process : MonoBehaviour
 {
@@ -99,6 +101,18 @@ public class Process : MonoBehaviour
     /// More threads can be created if the CPU will allow it.
     /// </summary>
     private Thread[] threads;
+
+    /// <summary>
+    /// Indicates whether the outcome of the program is NOT dependent on chance. 
+    /// 
+    /// A single-threaded program is inherently deterministic.
+    /// 
+    /// If a program has more than one thread, 
+    /// there is a chance that the program's tasks might be executed in a different order.
+    /// 
+    /// When this randomness affects a program's behaviour, we have a 'race condition'. 
+    /// </summary>
+    public bool Deterministic => threads.Length > 1;
 
     /// <summary>
     /// Run this whenever this process needs to wait for a contested, limited, or slow resource.
