@@ -1,12 +1,14 @@
 using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 
-public class Practice
+public class Concept
 {
+    public string practiceName;
     public string practiceDescription;
 
-    public Practice (string description)
+    public Concept (string name, string description)
     {
+        practiceName = name;
         practiceDescription = description;
     }
 }
@@ -50,8 +52,44 @@ public class DevOps : MonoBehaviour
         "A culture of continuous experimentation and learning."
     };
 
-    private Practice automation = new Practice("Making manual processes occur automatically instead.");
+    private Concept sysLevelThink = new Concept(
+        "Systems-level thinking",
+        "Every member of every team thinks about every part of the development process."
+        );
 
+    private Concept feedbackLoops = new Concept(
+        "",
+        "");
+
+    private Concept automation = new Concept(
+        "Automation", 
+        "Making manual processes occur automatically instead."
+        );
+
+    private Concept continuousIntegration = new Concept(
+        "Continuous Integration",
+        "The regular merging of contributor code into a central repo."
+        );
+
+    private Concept contDeployAndDeliver = new Concept(
+        "Continuous Deployment And Delivery",
+        "Automatically preparing code changes for release"
+        );
+
+    private Concept infrastructureAsCode = new Concept(
+        "Infrastructure As Code",
+        "Representing aspects of infrastructure within source code files."
+        );
+
+    private Concept microservices = new Concept(
+        "Microservices",
+        "Dividing up a business application into many small independent services."
+        );
+
+    private Concept Monitoring = new Concept(
+        "Monitoring",
+        "Gathering information about the state of the system during runtime"
+        );
 
 
 
