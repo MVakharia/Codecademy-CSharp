@@ -4,6 +4,8 @@ Code written while studying C# with Codecademy.
 
 ## Topics for further study:
 
+A list of topics that I'd like to study further. 
+
 - The 'char' data type.
 
 - Statically typed and dynamically typed languages, and strongly and weakly typed languages, and the differences and overlap.
@@ -24,39 +26,39 @@ It's bad practice to only have a single 'catch' block with a parameter of (Excep
 
 - %=
 
-'continue'—this, along with 'break', are collectively known as 'jump' statements.
+- 'continue' and 'break' are collectively known as 'jump' statements.
 
-The difference between 'do while' loops and 'while' loops
+- The difference between 'do while' loops and 'while' loops
 
-Generics
+- Generics
 
-Array methods and List methods - Remove(), Clear(), Contains(), AddRange(), InsertRange(), RemoveRange()
+- Array methods and List methods - Remove(), Clear(), Contains(), AddRange(), InsertRange(), RemoveRange()
 
-Named Arguments
+- Named Arguments
 
-Getting subclasses and superclasses mixed up
+- Getting subclasses and superclasses mixed up
 
-The 'as' operator
+- The 'as' operator
 
-Upcasting and downcasting
+- Upcasting and downcasting
 
-The 'is' operator
+- The 'is' operator
 
-Static constructors
+- Static constructors
 
-Interfaces
+- Interfaces
 
-Value types and reference types
+- Value types and reference types
 
-Comparing two value types with ==, vs comparing two reference types with ==
+- The difference between comparing value types with == and comparing reference types with ==
 
-Structs
+- Structs
 
-Referencing objects through other objects in their hierarchy, or through the interfaces they implement.
+- Referencing objects through other objects in their hierarchy, or through the interfaces they implement.
 
-Math.Round
+### Math.Round
 
-Math.Round with an argument of type 'double' will round a midpoint double to the nearest even integer. For example, 6.5 will be rounded to 6, and 11.5 will be rounded to 12.
+- Math.Round with an argument of type 'double' will round a midpoint double to the nearest even integer. For example, 6.5 will be rounded to 6, and 11.5 will be rounded to 12.
 Invariant Culture
 
-GetHashCode
+- GetHashCode
